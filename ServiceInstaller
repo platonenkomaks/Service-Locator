@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class ServiceInstaller : MonoBehaviour
+{
+    [SerializeField] private PCInput _pcInput;
+    [SerializeField] private PlayerMovement _playerMovement;
+    
+    private void Awake()
+    {
+        ServiceLocator.RegisterService<PCInput>(_pcInput);
+        ServiceLocator.RegisterService<PlayerMovement>(_playerMovement);
+    }
+}
